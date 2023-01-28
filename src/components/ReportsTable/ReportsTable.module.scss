@@ -1,0 +1,32 @@
+h2 {
+  padding: 15px;
+}
+
+.tableHeader {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.dateCell {
+  inline-size: 10%;
+}
+
+.timeCell {
+  inline-size: 5%;
+}
+
+.commentsCell {
+  inline-size: 40%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 1px;
+}
+
+.attachmentsCell {
+  inline-size: 10%;
+}
+
+.buttonsCell {
+  inline-size: 20%;
+}
