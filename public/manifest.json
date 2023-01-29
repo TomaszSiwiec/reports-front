@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "StorkFit",
+  "name": "Reporting system for StorkFit",
   "icons": [
     {
       "src": "favicon.ico",

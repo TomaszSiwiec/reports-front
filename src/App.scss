@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
 
-$navbar-height: 50px;
+$navbar-height: 8vh;
 
 html, body {
   height: 100vh;
@@ -12,10 +12,15 @@ html, body {
 }
 
 .navbar {
+  align-items: center;
   height: $navbar-height;
   border-bottom: 2px;
   border-bottom-color: goldenrod;
   border-bottom-style: solid;
+}
+
+.navbar img {
+  height: calc($navbar-height - 30px);
 }
 
 .column-full-height {
@@ -31,4 +36,11 @@ html, body {
 
 .menubar Button {
   margin-top: 15px;
+}
+
+footer {
+  justify-content: center;
+  border-top: 2px;
+  border-top-color: goldenrod;
+  border-top-style: solid;
 }

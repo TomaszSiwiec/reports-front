@@ -102,8 +102,8 @@ const ReportsTable = () => {
     };
 
     return (
-        <Container className="align-content-center">
-            <Table striped bordered hover>
+        <Container className="align-content-center table-responsive">
+            <Table striped bordered hover className="w-100">
                 <thead>
                 <td colSpan={5} className={styles.tableHeader}>
                     Reports

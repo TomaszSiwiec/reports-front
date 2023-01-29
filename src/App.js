@@ -4,18 +4,17 @@ import {Col, Container, Navbar, Row} from "react-bootstrap";
 import logo from "./logo.svg";
 import ReportsTable from "./components/ReportsTable/ReportsTable";
 import Menu from "./components/Menu/Menu";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
         <div className="App">
-            <Navbar bg="dark" variant="dark" className="navbar">
-                <Container>
-                    <Navbar.Brand href="#home">
+            <Navbar bg="dark" variant="dark">
+                <Container className="m-auto">
+                    <Navbar.Brand href="#home" className="m-auto">
                         <img
                             alt=""
                             src={logo}
-                            width="130"
-                            height="35"
                             className="d-inline-block align-top"
                         />{' '}
                     </Navbar.Brand>
@@ -23,7 +22,7 @@ function App() {
             </Navbar>
             <Container fluid>
                 <Row className="text-white">
-                    <Col className="bg-body column-full-height menubar" lg="2">
+                    <Col className="bg-body column-full-height menubar position-relative" lg="2">
                         <Menu />
                     </Col>
                     <Col className="bg-body text-black m-auto h-100" lg="10">
@@ -31,7 +30,7 @@ function App() {
                     </Col>
                 </Row>
             </Container>
-
+            <Footer />
         </div>
     );
 }
