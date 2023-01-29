@@ -1,0 +1,54 @@
+.reportModal {
+ min-width: 60vw;
+}
+
+.reportModalBody{
+ border-top: 1px solid black;
+}
+
+.line {
+ display:block;
+ position: relative;
+ width:100%; /*or whatever width you want the effect of <hr>*/
+ border-top: 1px solid #ccc;
+ margin-top: 20px;
+}
+.inputs {
+ position: absolute;
+ margin: 10px;
+ right: 0px;
+}
+
+.inputsDiv {
+ width: 100%;
+ position: relative;
+ padding: 10px;
+}
+
+.inputGroups {
+ position: relative;
+ padding: 10px;
+}
+
+.modelColumn {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;}
+
+.humanModel {
+ height: auto;
+}
+
+.buttonsGroup {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.textArea{
+ width: 100%;
+ height: 200px;
+}

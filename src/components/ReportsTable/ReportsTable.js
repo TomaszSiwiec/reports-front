@@ -3,8 +3,12 @@ import {faPlus} from '@fortawesome/fontawesome-free-solid'
 import styles from "./ReportsTable.module.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperclip} from '@fortawesome/fontawesome-free-solid'
+import {useState} from "react";
+import ReportModal from "../ReportModal/ReportModal";
 
 const ReportsTable = () => {
+
+    const [show, setShow] = useState(false);
     // https://codepen.io/cornflourblue/pen/oZZzLr
     // pagination
     const elements = () => [
@@ -114,7 +118,7 @@ const ReportsTable = () => {
                     <th>Comments</th>
                     <th>Attachments</th>
                     <th>
-                        <Button className="btn-secondary w-50"><FontAwesomeIcon icon={faPlus}/> Add new</Button>
+                        <Button className="btn-secondary w-50" onClick={() => setShow(true)}><FontAwesomeIcon icon={faPlus}/> Add new</Button>
                     </th>
                 </tr>
                 </thead>
@@ -123,12 +127,12 @@ const ReportsTable = () => {
                     elements().map(el => {
                         return (
                             <tr>
-                                <td className={styles.dateCell}>{el.date}</td>
-                                <td className={styles.timeCell}>{el.time}</td>
-                                <td className={styles.commentsCell}>{el.comments}</td>
-                                <td className={styles.attachmentsCell}><FontAwesomeIcon
+                                <td key={el.id} className={styles.dateCell}>{el.date}</td>
+                                <td key={el.id} className={styles.timeCell}>{el.time}</td>
+                                <td key={el.id} className={styles.commentsCell}>{el.comments}</td>
+                                <td key={el.id}className={styles.attachmentsCell}><FontAwesomeIcon
                                     icon={faPaperclip}/> {el.attachments.length}</td>
-                                <td className={styles.buttonsCell}>
+                                <td key={el.id} className={styles.buttonsCell}>
                                     <Button variant={"warning"}>Edit</Button>{" "}
                                     <Button variant={"danger"}>Delete</Button>
                                 </td>
@@ -141,6 +145,7 @@ const ReportsTable = () => {
             <Pagination className="m-5">
                 {paginators()}
             </Pagination>
+            <ReportModal show={show} setShow={setShow} title="New Report" subtitle="Insert your parameters:"/>
         </Container>
     );
 };
